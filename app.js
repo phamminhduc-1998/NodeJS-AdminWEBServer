@@ -470,7 +470,7 @@ let billSchema = require('./model/billSchema');
 let bill = mongoose.model('bill', billSchema);
 
 /**
- * Thêm sản phẩm
+ * Thêm bill
  * Lấy data trên from và đẩy lên MongoDB 
  * */
 app.post('/addBills', async (req, res) => {
@@ -497,7 +497,7 @@ app.post('/addBills', async (req, res) => {
 
 
 /**
- * Hiển thị tất cả danh sách Admin
+ * Hiển thị tất cả danh sách bill
  * Tìm kiếm data trên mongoSB và hiển thị ra HTML
  */
 app.get('/getAllBill', async (req, res) => {
@@ -510,7 +510,7 @@ app.get('/getAllBill', async (req, res) => {
 });
 
 /**
- * Tìm và Xóa User theo ID và update MongoDB
+ * Tìm và Xóa Bill theo ID và update MongoDB
  */
 app.get('/deleteBill/:id', async (req, res) => {
     await bill.findByIdAndDelete(req.params.id + '');
