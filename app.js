@@ -60,7 +60,7 @@ app.post('/admin/login', async function (req, res) {
 
 //Trả file json Admin
 app.get('/getJsonAdmin', async (req, res) => {
-    let admin = await AdminDK.find({}).lean();
+    let admin = await Admin.find({}).lean();
     res.send(admin);
 });
 
