@@ -7,7 +7,7 @@ app.set('view engine', 'handlebars');
 
 /**Connect mongoDB thông qua thư viên mongoose */
 let mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://Phamminhduc98:1998@cluster0.n0dkx.mongodb.net/MonggoDBASS?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://Phamminhduc:1998@cluster0.evprb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 
@@ -520,8 +520,5 @@ app.get('/deleteBill/:id', async (req, res) => {
 
 
 /**chạy lên localhost với post 3000 */
-// app.listen(process.env.PORT || '3000');
+app.listen(process.env.PORT || '3000');
 
-app.listen(process.env.PORT ,function(){
-    
-});
