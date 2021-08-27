@@ -520,5 +520,5 @@ app.get('/deleteBill/:id', async (req, res) => {
 
 
 /**chạy lên localhost với post 3000 */
-app.listen(process.env.PORT, function () {});
+app.listen(process.env.PORT || '3000');
 
